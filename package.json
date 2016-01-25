@@ -4,8 +4,8 @@
   "description": "jsdoc-export-default-interop",
   "main": "dist/index.js",
   "scripts": {
-    "build": "npm run docs && npm run clean:dist && babel lib -d dist",
-    "build:dev": "nodemon -w lib --exec \"npm run docs && npm run clean:dist && babel lib -d dist\"",
+    "build": "npm run clean:dist && babel lib -d dist",
+    "build:dev": "nodemon -w lib --exec \"npm run clean:dist && babel lib -d dist\"",
     "clean": "npm run clean:dist && npm run clean:coverage",
     "clean:dist": "rimraf dist",
     "clean:coverage": "rimraf coverage",
@@ -15,7 +15,7 @@
     "docs": "jsdoc2md --conf docs/conf.json --src \"lib/**/*.js\" -t docs/README.md.hbs -d 2 --partial \"./docs/partials/**/*.hbs\" --separators  -l JavaScript > README.md",
     "lint": "eslint lib",
     "precommit": "npm run docs",
-    "prepublish": "in-publish && npm run build || not-in-publish",
+    "prepublish": "in-publish && npm run build && npm run docs || not-in-publish",
     "test": "babel-node test/index.js",
     "test:dev": "npm run -s test | tap-spec"
   },
