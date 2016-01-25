@@ -40,7 +40,7 @@
     "babel-runtime": "^6.3.19",
     "blue-tape": "^0.1.11",
     "coveralls": "^2.11.6",
-    "doctoc": "^0.15.0",
+    "ddata": "github:nathanmarks/ddata#personal-modifications",
     "eslint": "^1.10.3",
     "isparta": "^4.0.0",
     "jsdoc": "github:jsdoc3/jsdoc#master",

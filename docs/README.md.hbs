@@ -1,14 +1,38 @@
-# WIP
-### jsdoc-export-default-interop
-[![Build Status](https://img.shields.io/circleci/project/nathanmarks/jsdoc-export-default-interop/master.svg?style=flat-square)](https://circleci.com/gh/nathanmarks/jsdoc-export-default-interop)
-[![Coverage Status](https://img.shields.io/coveralls/nathanmarks/jsdoc-export-default-interop/master.svg?style=flat-square)](https://coveralls.io/github/nathanmarks/jsdoc-export-default-interop?branch=master)
+## jsdoc-export-default-interop
 [![npm](https://img.shields.io/npm/v/jsdoc-export-default-interop.svg?style=flat-square)]()
 [![Dependency Status](https://david-dm.org/nathanmarks/jsdoc-export-default-interop.svg?style=flat-square)](https://david-dm.org/nathanmarks/jsdoc-export-default-interop)
 
+#### What is this?
+A jsdoc plugin for changing exports behaviour so es6 default exports that are not interopable with commonjs module requires are properly documented
+
 #### Installation
+
+Install via NPM.
 
 ```bash
 $ npm install jsdoc-export-default-interop --save-dev
+```
+
+Add plugin to jsdoc conf.json.
+
+```json
+{
+    "tags": {
+        "allowUnknownTags": true
+    },
+    "source": {
+        "includePattern": ".+\\.js(doc|x)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "plugins": ["../node_modules/jsdoc-export-default-interop/dist/index"],
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false,
+        "default": {
+            "outputSourceFiles": true
+        }
+    }
+}
 ```
 
 ---

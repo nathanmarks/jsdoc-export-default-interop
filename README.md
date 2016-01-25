@@ -23,12 +23,3 @@ interop in default exports from es6 module export syntax.
 
 -----
 
-<a name="exp_module_jsdoc-export-default-interop.astNodeVisitor--exports.astNodeVisitor"></a>
-### exports.astNodeVisitor : <code>Object</code> ⏏
-The plugin object.
-
-**Kind**: Exported constant  
-**See**: http://usejsdoc.org/about-plugins.html  
-
------
-
