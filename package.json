@@ -11,7 +11,7 @@
     "clean:coverage": "rimraf coverage",
     "coverage": "npm run clean:coverage && babel-node node_modules/.bin/isparta cover --report lcov --report text --report html test/index.js",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "dev": "nodemon --verbose -w lib -w test --exec \"npm run -s lint && npm run -s test:dev\"",
+    "dev": "nodemon --verbose -w lib -w test --exec \"npm run -s lint && npm run build && npm run -s test:dev\"",
     "docs": "jsdoc2md --conf docs/conf.json --src \"lib/**/*.js\" -t docs/README.md.hbs -d 2 --partial \"./docs/partials/**/*.hbs\" --separators  -l JavaScript > README.md",
     "lint": "eslint lib",
     "precommit": "npm run docs",
@@ -39,19 +39,23 @@
     "babel-preset-stage-0": "^6.3.13",
     "babel-runtime": "^6.3.19",
     "blue-tape": "^0.1.11",
+    "bluebird": "^3.1.4",
     "coveralls": "^2.11.6",
     "ddata": "github:nathanmarks/ddata#personal-modifications",
     "eslint": "^1.10.3",
     "isparta": "^4.0.0",
     "jsdoc": "github:jsdoc3/jsdoc#master",
+    "jsdoc-api": "^1.0.5",
     "jsdoc-parse": "github:nathanmarks/jsdoc-parse#es6-customizations",
     "jsdoc-to-markdown": "^1.3.3",
+    "lodash": "^4.0.1",
     "rimraf": "^2.5.1",
     "tap-spec": "^4.1.1",
     "tap-xunit": "^1.3.1",
     "tape": "^4.4.0"
   },
   "dependencies": {
-    "in-publish": "^2.0.0"
+    "in-publish": "^2.0.0",
+    "lodash": "^4.0.1"
   }
 }
