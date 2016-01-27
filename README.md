@@ -46,6 +46,11 @@ so es6 default exports that are not interopable
 with commonjs module requires are properly documented
 
 
+* [jsdoc-export-default-interop](#module_jsdoc-export-default-interop)
+    * [⏏ exports.astNodeVisitor](#exp_module_jsdoc-export-default-interop.astNodeVisitor) : <code>Object</code>
+    * [⏏ exports.default()](#exp_module_jsdoc-export-default-interop.default)
+
+
 -----
 
 <a name="exp_module_jsdoc-export-default-interop.astNodeVisitor"></a>
@@ -54,6 +59,14 @@ The plugin object.
 
 **Kind**: exports constant of <code>[jsdoc-export-default-interop](#module_jsdoc-export-default-interop)</code>
 **See**: http://usejsdoc.org/about-plugins.html  
+
+-----
+
+<a name="exp_module_jsdoc-export-default-interop.default"></a>
+### jsdoc-export-default-interop ⏏ exports.default()
+BUZZZ
+
+**Kind**: exports method of <code>[jsdoc-export-default-interop](#module_jsdoc-export-default-interop)</code>
 
 -----
 
